@@ -197,6 +197,7 @@ for candidate_model in candidate_models:
             for dok in [1,2,3,4]:
                 for idx in range(500):
                     hobby = student_agent._fixed_call()
+                    hobby = extract_dict_string(hobby)
                     chapter = random.choice(chapter_map[standard][subject])
                     qType = random.choice(question_types)
                     prompt=QG_prompt.format(
